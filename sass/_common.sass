@@ -1,49 +1,146 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
+*
+	margin: 0
+	+font-smoothing
+
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
+	font-size: 15px
+	font-family: 'Roboto', Arial, sans-serif
 	line-height: 1.4
+	background: #fff
+	color: #212121
+	min-width: 1000px
+
+%in
+	width: 960px
+	margin-left: auto
+	margin-right: auto
+.container
+	@extend %in
+
+.header
+.header__in
+	+clr
+	@extend %in
+	padding: 25px 0 28px
+.header__logo
+	float: left
+	+s(logo)
+	+hidetext
+	margin-right: 20px
+.header__slogan
+	float: left
+	width: 150px
+	margin-top: 15px
+	color: #000
+	font-size: 10px
+	line-height: 1.2
+.header__menu
+	float: right
+	margin-top: 20px
+	ul
+		+clr
+	li
+		float: left
+		font-size: 13px
+		color: #a9a9a9
+		margin-left: 25px
+		&:hover, &.is-active
+			a
+				color: #ea5c31
+				text-decoration: none
+			b
+				border-bottom: 1px solid #f4ad98
+	a
+		color: #a9a9a9
+		text-decoration: none
+	b
+		font-weight: normal
+		border-bottom: 1px solid #e5e5e5
 
 
-// common blocks
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -45px
+.footer, .push
+	height: 45px
+
+.footer
+	background: #222
+	color: #a9a9a9
+	font-size: 11px
+	line-height: 45px
+	a
+		color: #a9a9a9
+		text-decoration: none
+		&:hover
+			color: #faeeb9
+			text-decoration: underline
+.footer__in
+	+clr
+	@extend %in
+.footer__copy
+	float: left
+	margin-right: 75px
+.footer__menu
+	float: left
+	ul
+		+clr
+	li
+		float: left
+		margin-left: 20px
+		&:first-child
+			margin-left: 0
+.footer__developedby
+	float: right
+.footer__developedby-icon
+	position: relative
+	top: -2px
+	display: inline-block
+	vertical-align: middle
+	+s(artcade)
+	+hidetext
+
+.subhead
+	border: 1px solid #e5e5e5
+	border-width: 1px 0
+	height: 60px
+	line-height: 60px
+	font-size: 15px
+	.container
+		+clr
+.nav
+	float: left
+	font-weight: 900
+	font-size: 15px
+	ul
+		+clr
+	li
+		float: left
+		text-transform: uppercase
+		margin-left: 35px
+		letter-spacing: 0.1em
+		&:first-child
+			margin-left: 0
+		&.is-active, &:hover
+			a
+				color: #ea5c31
+				text-decoration: none
+			b
+				border-bottom: 1px solid #f4ad98
+	a
+		color: #212121
+		text-decoration: none
+	b
+		font-weight: 900
+		border-bottom: 1px solid #e5e5e5
+
+.contacts
+	float: right
+	font-weight: 900
+	letter-spacing: 0.1em
+
+
+
+
