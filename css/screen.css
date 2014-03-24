@@ -112,7 +112,7 @@ body { font-family: "Roboto", Arial, sans-serif; font-size: 15px; line-height: 1
 
 .partners__i { display: inline-block; vertical-align: middle; width: 116px; text-align: center; font-size: 0; margin-bottom: 20px; }
 
-.catalog { margin-bottom: 60px; }
+.catalog__section { margin-bottom: 60px; }
 
 .catalog__group { *zoom: 1; }
 .catalog__group:after { content: " "; display: table; clear: both; }
