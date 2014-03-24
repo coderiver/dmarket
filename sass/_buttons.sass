@@ -1,0 +1,38 @@
+.btn
+	display: inline-block
+	font-family: $font-base
+	font-size: $size-sm
+	font-weight: 900
+	color: $color-white
+	text-transform: uppercase
+	text-decoration: none
+	text-align: center
+	vertical-align: middle
+	cursor: pointer
+	white-space: nowrap
+	margin-bottom: 0
+	line-height: 16px
+	padding: 12px 15px
+	letter-spacing: 0.1em
+	+nosel
+	+border-radius($btn-border-radius)
+	background-image: none
+	background: $color-orange
+	&:hover, &:active
+		background: $color-lightorange
+	&:active
+		// background: $color-lightorange
+		+box-shadow(inset 0 3px 5px rgba(0,0,0,.125))
+
+.btn-yellow
+	color: $color-darkblue
+	background: $color-yellow
+	&:hover,
+	&:active
+		background: $color-lightyellow
+
+.btn-block
+	display: block
+	width: 100%
+	padding-left: 0
+	padding-right: 0

@@ -3,12 +3,15 @@
 	+font-smoothing
 
 body
-	font-size: 15px
-	font-family: 'Roboto', Arial, sans-serif
+	font-family: $font-base
+	font-size: $size-base
 	line-height: 1.4
-	background: #fff
-	color: #212121
+	background: $bg-base
+	color: $color-base
 	min-width: 1000px
+
+.color-orange
+	color: $color-orange
 
 %in
 	width: 960px
@@ -18,10 +21,9 @@ body
 	@extend %in
 
 .header
-.header__in
-	+clr
-	@extend %in
-	padding: 25px 0 28px
+	.container
+		+clr
+		padding: 25px 0
 .header__logo
 	float: left
 	+s(logo)
@@ -31,7 +33,7 @@ body
 	float: left
 	width: 150px
 	margin-top: 15px
-	color: #000
+	color: $color-black
 	font-size: 10px
 	line-height: 1.2
 .header__menu
@@ -41,22 +43,21 @@ body
 		+clr
 	li
 		float: left
-		font-size: 13px
-		color: #a9a9a9
+		font-size: $size-sm
+		color: $color-gray
 		margin-left: 25px
 		&:hover, &.is-active
 			a
-				color: #ea5c31
+				color: $color-orange
 				text-decoration: none
-			b
-				border-bottom: 1px solid #f4ad98
+				b
+					border-bottom: 1px solid $color-lightorange
 	a
-		color: #a9a9a9
+		color: $color-gray
 		text-decoration: none
-	b
-		font-weight: normal
-		border-bottom: 1px solid #e5e5e5
-
+		b
+			font-weight: normal
+			border-bottom: 1px solid $color-lightgray
 
 .out
 	min-height: 100%
@@ -67,19 +68,18 @@ body
 	height: 45px
 
 .footer
-	background: #222
-	color: #a9a9a9
-	font-size: 11px
+	background: $bg-invert
+	color: $color-gray
+	font-size: $size-xs
 	line-height: 45px
 	a
-		color: #a9a9a9
+		color: $color-gray
 		text-decoration: none
 		&:hover
-			color: #faeeb9
+			color: $color-yellow
 			text-decoration: underline
-.footer__in
-	+clr
-	@extend %in
+	.container
+		+clr
 .footer__copy
 	float: left
 	margin-right: 75px
@@ -103,44 +103,81 @@ body
 	+hidetext
 
 .subhead
-	border: 1px solid #e5e5e5
+	position: relative
+	border: 1px solid $border-color-base
 	border-width: 1px 0
 	height: 60px
 	line-height: 60px
-	font-size: 15px
+	font-size: $size-base
 	.container
 		+clr
 .nav
 	float: left
 	font-weight: 900
-	font-size: 15px
+	font-size: $size-base
+	letter-spacing: 0.1em
 	ul
 		+clr
 	li
 		float: left
 		text-transform: uppercase
 		margin-left: 35px
-		letter-spacing: 0.1em
+		// letter-spacing: 0.1em
 		&:first-child
 			margin-left: 0
-		&.is-active, &:hover
+		&.is-active
 			a
-				color: #ea5c31
+				color: $color-orange
 				text-decoration: none
-			b
-				border-bottom: 1px solid #f4ad98
+				b
+					border-bottom: 1px solid $color-lightorange
 	a
-		color: #212121
+		color: $color-base
 		text-decoration: none
-	b
-		font-weight: 900
-		border-bottom: 1px solid #e5e5e5
+		b
+			font-weight: 900
+			border-bottom: 1px solid $color-lightgray
+		&:hover
+			color: $color-orange
+			text-decoration: none
+			b
+				border-bottom: 1px solid $color-lightorange
 
 .contacts
 	float: right
 	font-weight: 900
 	letter-spacing: 0.1em
 
+.promo
+	border-top: 1px solid $border-color-base
+	margin-top: -1px
+	margin-bottom: 60px
+	background: $bg-darkblue url('../img/pttrn.png')
+	color: $color-white
+	.container
+		padding: 25px 0 //tmp
+		+clr
+	.actions
+		padding-top: 15px
 
+.actions
+	p
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
 
+.partners
+	border-top: 1px solid $border-color-base
+	.container
+		padding: 25px 0 20px
+	.h2
+		margin-top: 5px
+.partners__list
+.partners__i
+	display: inline-block
+	vertical-align: middle
+	width: 116px
+	text-align: center
+	font-size: 0
+	margin-bottom: 20px
 
