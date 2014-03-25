@@ -104,8 +104,8 @@ body { font-family: "Roboto", Arial, sans-serif; font-size: 15px; line-height: 1
 .phone { float: right; font-weight: 900; letter-spacing: 0.1em; }
 
 .promo { border-top: 1px solid rgba(0, 0, 0, 0.1); margin-top: -1px; margin-bottom: 60px; background: #635398 url("../img/pttrn.png"); color: white; }
-.promo p { margin-bottom: 1em; }
-.promo.promo_mod { color: #212121; background: none; }
+.promo p + p { margin-top: 1em; }
+.promo.promo_mod { color: #212121; background: none; margin-bottom: 0; border: none; }
 .promo .container { padding: 25px 0; *zoom: 1; }
 .promo .container:after { content: " "; display: table; clear: both; }
 .promo .actions { padding: 20px 0; }
@@ -195,10 +195,32 @@ body { font-family: "Roboto", Arial, sans-serif; font-size: 15px; line-height: 1
 
 .review { margin-bottom: 60px; }
 
-.review__table td { vertical-align: middle; text-align: center; border: 1px solid #faeeb9; padding: 42px 0; }
-.review__table td img { display: block; margin-left: auto; margin-right: auto; }
+.review__group td { vertical-align: middle; text-align: center; border: 1px solid #faeeb9; padding: 42px 0; }
+.review__group td img { display: block; margin-left: auto; margin-right: auto; }
+
+.product__section { border-top: 1px solid rgba(0, 0, 0, 0.1); }
+.product__section.product__section_mod { border: none; }
+.product__section .container { padding: 40px 0; }
+.product__section p + p { margin-top: 1em; }
+.product__section p + ul { margin-top: 1em; }
+.product__section small { font-size: 13px; }
+.product__section .footnote { position: relative; font-size: 13px; }
+.product__section .footnote__mark { position: absolute; left: -10px; }
+
+.list li { position: relative; padding-left: 1.5em; margin-bottom: 0.3em; }
+.list li:before { position: absolute; left: 0; content: "\002022"; color: #ea5c31; }
+
+.table { margin-bottom: 30px; }
+.table th, .table td { text-align: left; padding: 13px 20px; border: 1px solid #e5e5e5; }
+.table th { background: #faeeb9; font-weight: 900; border: 1px solid rgba(0, 0, 0, 0.05); border-width: 0 1px 1px 1px; }
+.table th:first-child { border-left: none; padding-left: 0; }
+.table th:last-child { border-right: none; }
+.table td:first-child { padding-left: 0; font-weight: 900; border-left: none; }
+.table td:last-child { border-right: none; }
 
 .layout { *zoom: 1; }
 .layout:after { content: " "; display: table; clear: both; }
 .layout .l-col1 { float: left; width: 710px; }
 .layout .l-col2 { float: right; width: 210px; }
+.layout .l-colleft { float: left; width: 48%; }
+.layout .l-colright { float: right; width: 48%; }

@@ -154,11 +154,13 @@ body
 	margin-bottom: 60px
 	background: $bg-darkblue url('../img/pttrn.png')
 	color: $color-white
-	p
-		margin-bottom: 1em
+	p + p
+		margin-top: 1em
 	&.promo_mod
 		color: $color-base
 		background: none
+		margin-bottom: 0
+		border: none
 	.container
 		padding: 25px 0 //tmp
 		+clr
@@ -382,7 +384,7 @@ body
 
 .review
 	margin-bottom: 60px
-.review__table
+.review__group
 	td
 		vertical-align: middle
 		text-align: center
@@ -392,5 +394,78 @@ body
 			display: block
 			margin-left: auto
 			margin-right: auto
+
+.product
+.product__section
+	border-top: 1px solid $border-color-base
+	&.product__section_mod
+		border: none
+	.container
+		padding: 40px 0
+	p + p
+		margin-top: 1em
+	p + ul
+		margin-top: 1em
+	small
+		font-size: $size-sm
+	.footnote
+		position: relative
+		font-size: $size-sm
+	.footnote__mark
+		position: absolute
+		left: -10px
+
+.list
+	li
+		position: relative
+		padding-left: 1.5em
+		margin-bottom: .3em
+		&:before
+			position: absolute
+			left: 0
+			content: "\002022"
+			color: $color-orange
+
+.table
+	margin-bottom: 30px
+	th, td
+		text-align: left
+		padding: 13px 20px
+		border: 1px solid rgba(#e5e5e5, 1)
+	th
+		background: $color-yellow
+		font-weight: 900
+		border: 1px solid rgba($border-color-base, .05)
+		border-width: 0 1px 1px 1px
+		&:first-child
+			border-left: none
+			padding-left: 0
+		&:last-child
+			border-right: none
+	td
+		&:first-child
+			// text-align: left
+			padding-left: 0
+			font-weight: 900
+			border-left: none
+		&:last-child
+			border-right: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
