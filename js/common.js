@@ -19,5 +19,13 @@ $(document).ready(function() {
 		prev: ".gallery__prev"
 	});
 
+	$(".js-price").click(function (){
+		var page = $(this).attr("href");
+		$('html, body').animate({
+			scrollTop: $(page).offset().top
+		}, 500);
+		return false;
+	});
+
 
 });

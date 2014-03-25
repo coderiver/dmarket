@@ -221,7 +221,7 @@ body { font-family: "Roboto", Arial, sans-serif; font-size: 15px; line-height: 1
 
 .gallery { background: #635398 url("../img/pttrn.png"); padding: 35px 0; font-size: 13px; color: white; }
 
-.gallery__info { position: relative; }
+.gallery__desc { position: relative; }
 
 .gallery__slider { margin-bottom: 30px; *zoom: 1; font-size: 0; }
 .gallery__slider:after { content: " "; display: table; clear: both; }
