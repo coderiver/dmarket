@@ -148,7 +148,7 @@ body
 	font-weight: 900
 	letter-spacing: 0.1em
 
-.promo
+.hentry
 	border-top: 1px solid $border-color-base
 	margin-top: -1px
 	margin-bottom: 60px
@@ -156,11 +156,16 @@ body
 	color: $color-white
 	p + p
 		margin-top: 1em
-	&.promo_mod
+	&.hentry_mod
 		color: $color-base
 		background: none
-		margin-bottom: 0
+		margin-bottom: 40px
 		border: none
+		.container
+			padding: 0
+		.actions
+			border: 1px solid $border-color-base
+			border-width: 1px 0
 	.container
 		padding: 25px 0 //tmp
 		+clr
@@ -168,8 +173,6 @@ body
 		padding: 20px 0
 
 .actions
-	border: 1px solid $border-color-base
-	border-width: 1px 0
 	p
 		margin-bottom: 20px
 		&:last-child
@@ -395,10 +398,10 @@ body
 			margin-left: auto
 			margin-right: auto
 
-.product
-.product__section
+.entries
+.entry
 	border-top: 1px solid $border-color-base
-	&.product__section_mod
+	&.entry_mod
 		border: none
 	.container
 		padding: 40px 0
@@ -452,9 +455,44 @@ body
 			border-right: none
 
 
-
-
-
+.gallery
+	background: $color-darkblue url('../img/pttrn.png')
+	padding: 35px 0
+	font-size: $size-sm
+	color: $color-white
+.gallery__info
+	position: relative
+.gallery__slider
+	margin-bottom: 30px
+	+clr
+	font-size: 0
+	.cycle-carousel-wrap
+		margin-left: -155px !important
+.gallery__nav
+	position: absolute
+	right: 0
+	font-size: $size-sm
+	span
+		display: inline-block
+		+hide-text
+		cursor: pointer
+	.gallery__prev
+		+s(prev)
+		margin-right: 15px
+	.gallery__next
+		+s(next)
+		margin-left: 15px
+.gallery__product
+	display: inline-block
+	width: 320px
+	height: 325px
+	background: $color-white
+	margin-left: 1px
+	font-size: $size-base
+	img
+		display: block
+		min-width: 100%
+		max-height: 100%
 
 
 

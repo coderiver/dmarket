@@ -9,6 +9,10 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css">
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/cycle.js"></script>
+	<script src="js/jquery.cycle2.carousel.js"></script>
+	<script src="js/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -76,10 +80,10 @@
 			</ul>
 		</div>
 		<!-- end breadcrumbs -->
-		<!-- begin product -->
-		<div class="product">
-			<!-- begin promo -->
-			<div class="promo promo_mod">
+		<!-- begin entries -->
+		<div class="entries">
+			<!-- begin hentry -->
+			<div class="hentry hentry_mod">
 				<div class="container layout">
 					<div class="l-col1">
 						<h1 class="h1">Шапки трикотажные</h1>
@@ -94,8 +98,47 @@
 					</div>
 				</div>
 			</div>
-			<!-- end promo -->
-			<div class="product__section product__section_mod">
+			<!-- end hentry -->
+			<!-- begin gallery -->
+			<div class="gallery">
+				<div class="gallery__slider js-prodslider">
+					<div class="gallery__product">
+						<a rel="fancy_group" href="img/img_1.jpg">
+							<img alt="img" src="img/img_1.jpg">
+						</a>
+					</div>
+					<div class="gallery__product">
+						<a rel="fancy_group" href="img/img_2.jpg">
+							<img alt="img" src="img//img_2.jpg">
+						</a>
+					</div>
+					<div class="gallery__product">
+						<a rel="fancy_group" href="img/img_3.jpg">
+							<img alt="img" src="img//img_3.jpg">
+						</a>
+					</div>
+					<div class="gallery__product">
+						<a rel="fancy_group" href="img/img_4.jpg">
+							<img alt="img" src="img//img_4.jpg">
+						</a>
+					</div>
+					<div class="gallery__product">
+						<a rel="fancy_group" href="img/img_5.jpg">
+							<img alt="img" src="img//img_5.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="gallery__info container">
+					<div class="gallery__nav">
+						<span class="gallery__prev">prev</span>
+						<span class="gallery__next">next</span>
+					</div>
+					<p>Состав 100% акрил.</p>
+					<p>Максимальное количество цветов — 4.</p>
+				</div>
+			</div>
+			<!-- end gallery -->
+			<div class="entry entry_mod">
 				<div class="container">
 					<h2 class="h2 color-orange">Пошив трикотажных шапок</h2>
 					<table class="table">
@@ -133,7 +176,7 @@
 					<p class="footnote">Двойные с отворотом\без отворота. Помпон +15 рублей. Разработка программы при тираже до 300 штук — 700 рублей.  Свыше 300 штук — бесплатно.</p>
 				</div>
 			</div>
-			<div class="product__section">
+			<div class="entry">
 				<div class="container">
 					<h2 class="h2 color-orange">Изготовление шапок с логотипом на заказ</h2>
 					<div class="layout">
@@ -147,7 +190,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="product__section">
+			<div class="entry">
 				<div class="container">
 					<div class="layout">
 						<div class="l-colleft">
@@ -167,7 +210,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- end product -->
+		<!-- end entries -->
 		<!-- begin partners -->
 		<div class="partners">
 			<div class="container">
