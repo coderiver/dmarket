@@ -34,6 +34,9 @@ h3, .h3 { font-size: 15px; }
 .btn-yellow { color: #635398; background: #faeeb9; }
 .btn-yellow:hover, .btn-yellow:active { background: #fcf6dc; }
 
+.btn-blue { color: #faeeb9; background: #635398; }
+.btn-blue:hover, .btn-blue:active { background: rgba(99, 83, 152, 0.5); }
+
 .btn-block { display: block; width: 100%; padding-left: 0; padding-right: 0; }
 
 * { margin: 0; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
@@ -83,7 +86,6 @@ body { font-family: "Roboto", Arial, sans-serif; font-size: 15px; line-height: 1
 .footer__developedby-icon { position: relative; top: -2px; display: inline-block; vertical-align: middle; background: url('../img/icons-s7f82c384fb.png') 0 -63px no-repeat; width: 59px; height: 12px; font: 0/0 a; text-shadow: none; color: transparent; }
 
 .subhead { position: relative; border: 1px solid rgba(0, 0, 0, 0.1); border-width: 1px 0; height: 60px; line-height: 60px; font-size: 15px; }
-.subhead.subhead_mod { margin-bottom: 30px; }
 .subhead .container { *zoom: 1; }
 .subhead .container:after { content: " "; display: table; clear: both; }
 
@@ -102,10 +104,13 @@ body { font-family: "Roboto", Arial, sans-serif; font-size: 15px; line-height: 1
 .phone { float: right; font-weight: 900; letter-spacing: 0.1em; }
 
 .promo { border-top: 1px solid rgba(0, 0, 0, 0.1); margin-top: -1px; margin-bottom: 60px; background: #635398 url("../img/pttrn.png"); color: white; }
+.promo p { margin-bottom: 1em; }
+.promo.promo_mod { color: #212121; background: none; }
 .promo .container { padding: 25px 0; *zoom: 1; }
 .promo .container:after { content: " "; display: table; clear: both; }
-.promo .actions { padding-top: 15px; }
+.promo .actions { padding: 20px 0; }
 
+.actions { border: 1px solid rgba(0, 0, 0, 0.1); border-width: 1px 0; }
 .actions p { margin-bottom: 20px; }
 .actions p:last-child { margin-bottom: 0; }
 
@@ -141,7 +146,7 @@ body { font-family: "Roboto", Arial, sans-serif; font-size: 15px; line-height: 1
 
 .offer__title { height: 43px; line-height: 43px; padding: 0 14px; background: #faeeb9; font-weight: 900; text-transform: uppercase; color: #212121; margin-left: -1px; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; }
 
-.breadcrumbs { margin-bottom: 40px; }
+.breadcrumbs { margin-top: 30px; margin-bottom: 40px; }
 .breadcrumbs ul { *zoom: 1; }
 .breadcrumbs ul:after { content: " "; display: table; clear: both; }
 .breadcrumbs li { position: relative; float: left; font-size: 13px; margin-left: 8px; line-height: 1.1; }
