@@ -109,31 +109,33 @@
 		<div class="feedback">
 			<div class="container">
 				<div class="h1">Форма обратной связи</div>
-				<div class="feedback__form">
-					<div class="feedback__row">
-						<div class="feedback__group">
-							<label class="feedback__label" for="exampleInputName">Имя *</label>
-							<input type="text" class="input" id="exampleInputName" placeholder="">
+				<div class="feedback__form js-form">
+					<form action="">
+						<div class="feedback__row">
+							<div class="feedback__group">
+								<label class="feedback__label" for="exampleInputName">Имя *</label>
+								<input type="text" class="input" id="exampleInputName" placeholder="">
+							</div>
+							<div class="feedback__group">
+								<label class="feedback__label" for="exampleInputTel">Телефон</label>
+								<input type="tel" class="input" id="exampleInputTel" placeholder="">
+							</div>
+							<div class="feedback__group">
+								<label class="feedback__label" for="exampleInputEmail">E-mail *</label>
+								<input type="email" class="input" id="exampleInputEmail" placeholder="">
+							</div>
 						</div>
-						<div class="feedback__group">
-							<label class="feedback__label" for="exampleInputTel">Телефон</label>
-							<input type="tel" class="input" id="exampleInputTel" placeholder="">
+						<div class="feedback__row">
+							<div class="feedback__group feedback__group_wide">
+								<label class="feedback__label" for="exampleTextareaMessage">Сообщение *</label>
+								<textarea class="textarea" id="exampleTextareaMessage" rows="5"></textarea>
+							</div>
 						</div>
-						<div class="feedback__group is-error">
-							<label class="feedback__label" for="exampleInputEmail">E-mail *</label>
-							<input type="email" class="input" id="exampleInputEmail" placeholder="">
+						<div class="feedback__action">
+							<button type="submit" class="btn btn-yellow">Отправить</button>
+							<span class="feedback__helper">* поля, обязательные для заполнения</span>
 						</div>
-					</div>
-					<div class="feedback__row">
-						<div class="feedback__group feedback__group_wide">
-							<label class="feedback__label" for="exampleTextareaMessage">Сообщение *</label>
-							<textarea class="textarea" id="exampleTextareaMessage" rows="5"></textarea>
-						</div>
-					</div>
-					<div class="feedback__action">
-						<button type="submit" class="btn btn-yellow">Отправить</button>
-						<span class="feedback__helper">* поля, обязательные для заполнения</span>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>

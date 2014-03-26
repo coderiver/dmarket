@@ -68,6 +68,13 @@ $(document).ready(function() {
 		});
 	} select();
 
+	$('.js-form form').on('submit',function(){
+		var el = $(this).find('input, textarea');
+		if( !$(el).val() ) {
+			$(el).parents().addClass('is-error');
+		}
+	});
+
 	//click document
 	$(document).click(function(event) {
 		if($(event.target).parents().index($('.popup')) == -1) {
