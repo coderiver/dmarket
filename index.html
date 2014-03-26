@@ -81,7 +81,7 @@
 				<div class="l-col2">
 					<div class="actions">
 						<p><a class="btn btn-block" href="#0">Прайс-лист</a></p>
-						<p><button class="btn btn-block btn-yellow" type="submit">Сделать заказ</button></p>
+						<p><button class="btn btn-block btn-yellow btn-order" type="submit">Сделать заказ</button></p>
 					</div>
 				</div>
 			</div>
@@ -405,6 +405,56 @@
 	</div>
 </div>
 <!-- end footer -->
+
+
+<!-- begin popup -->
+<div class="popup is-open">
+	<div class="popup__in">
+		<div class="popup__close"></div>
+		<div class="form">
+			<div class="form__group">
+				<label class="form__label" for="exampleInputName">Хочу заказать</label>
+				<div class="select js-select">
+					<span><em class="js-select-text">Флаги</em><i></i></span>
+					<input type="hidden" val="" class="js-select-input">
+					<div class="select__drop js-select-drop">
+						<ul>
+							<li data-id="1" class="is-selected">Флаги</li>
+							<li data-id="2">Blah-blah-blah</li>
+							<li data-id="3">Blah-blah-blah</li>
+							<li data-id="4">Blah-blah-blah</li>
+							<li data-id="5">Blah-blah-blah</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="form__group">
+				<label class="form__label">Количество</label>
+				<div class="form__quantity">
+					<div class="form__quantityitem">шт.</div>
+					<input type="text" placeholder="">
+				</div>
+			</div>
+			<div class="form__group">
+				<label class="form__label" for="exampleInputName">Имя</label>
+				<input type="text" class="input" id="exampleInputName" placeholder="">
+			</div>
+			<div class="form__group">
+				<label class="form__label">Телефон</label>
+				<div class="form__tel">
+					<input type="text" class="form__telcode1" value="+7">
+					<input type="text" class="form__telcode2">
+					<input type="text" class="form__telcode3">
+				</div>
+			</div>
+			<div class="form__actions">
+				<button type="submit" class="btn btn-yellow">Отрпавить</button>
+				<a class="form__cancel" href="#0">Отмена</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end popup -->
 
 </body>
 </html>

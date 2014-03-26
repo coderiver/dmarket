@@ -23,7 +23,7 @@ body
 .header
 	.container
 		+clr
-		padding: 25px 0
+		padding: 25px 0 28px
 .header__logo
 	float: left
 	+s(logo)
@@ -38,14 +38,14 @@ body
 	line-height: 1.2
 .header__menu
 	float: right
-	margin-top: 20px
+	margin-top: 17px
 	ul
 		+clr
 	li
 		float: left
 		font-size: $size-sm
 		color: $color-gray
-		margin-left: 25px
+		margin-left: 23px
 		&:hover, &.is-active
 			a
 				color: $color-orange
@@ -146,7 +146,7 @@ body
 .phone
 	float: right
 	font-weight: 900
-	letter-spacing: 0.1em
+	letter-spacing: 0.08em
 
 .hentry
 	border-top: 1px solid $border-color-base
@@ -155,20 +155,26 @@ body
 	background: $bg-darkblue url('../img/pttrn.png')
 	color: $color-white
 	p + p
-		margin-top: 1em
+		margin-top: 1.6em
 	&.hentry_mod
 		color: $color-base
 		background: none
-		margin-bottom: 40px
+		margin-bottom: 38px
 		border: none
 		.container
 			padding: 0
+		.h1
+			margin-bottom: 24px
+		p
+			line-height: 1.6
 		.actions
 			border: 1px solid $border-color-base
 			border-width: 1px 0
 	.container
-		padding: 25px 0 //tmp
+		padding: 20px 0 27px
 		+clr
+	.h1
+		margin-bottom: 14px
 	.actions
 		padding: 20px 0
 
@@ -181,9 +187,10 @@ body
 .partners
 	border-top: 1px solid $border-color-base
 	.container
-		padding: 25px 0 20px
+		padding: 28px 0 25px
 	.h2
 		margin-top: 5px
+		margin-bottom: 33px
 .partners__list
 .partners__i
 	display: inline-block
@@ -191,23 +198,23 @@ body
 	width: 116px
 	text-align: center
 	font-size: 0
-	margin-bottom: 20px
+	margin-bottom: 16px
 
 .catalog
 .catalog__section
-	margin-bottom: 60px
+	margin-bottom: 47px
 .catalog__group
 	+clr
 	&:first-child
-		.offer__border
-			border-width: 1px 0 1px 1px
+		// .offer__border
+		// 	border-width: 1px 0 1px 1px
 		&:hover
 			.offer__border
 				top: 0
 		.offer
-			&:first-child
-				.offer__border
-					border-width: 1px 0 1px 0
+			// &:first-child
+			// 	.offer__border
+			// 		border-width: 1px 0 1px 0
 				&:hover
 					.offer__border
 						border-width: 1px 1px 1px 1px
@@ -274,10 +281,11 @@ body
 	color: $color-base
 	margin-left: -1px
 	+text-overflow
+	font-size: $size-sm
 
 .breadcrumbs
 	margin-top: 30px
-	margin-bottom: 40px
+	margin-bottom: 35px
 	ul
 		+clr
 	li
@@ -308,25 +316,30 @@ body
 
 .contacts
 	margin-bottom: 75px
+	.h1
+		margin-bottom: 23px
 .contacts__content
 	+clr
 	background: $bg-yellow
 .contacts__map
 	float: left
 	width: 480px
-	height: 400px
+	height: 402px
 	img
 		display: block
 		min-width: 100%
 		max-height: 100%
 .contacts__info
 	overflow: hidden
-	padding: 40px
+	padding: 42px 39px
 	color: $color-black
 	.h3
-		margin-bottom: 0
+		margin-bottom: 5px
+		letter-spacing: 0
+	p
+		line-height: 1.6
 .contacts__field
-	margin-bottom: 30px
+	margin-bottom: 26px
 
 .feedback
 	background: $bg-darkblue url('../img/pttrn.png')
@@ -361,6 +374,62 @@ body
 	vertical-align: middle
 	font-size: $size-sm
 	margin-left: 20px
+
+.form__quantity
+	position: relative
+	background: $bg-darkblue
+	border: 1px solid $color-white
+	height: 30px
+	width: 200px
+	+box
+	input
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		+box
+		font-size: 15px
+		line-height: 16px
+		padding: 5px 52px 5px 10px
+		color: $color-white
+		+placeholder-color($color-white)
+		background: transparent
+		font-family: $font-base
+.form__quantityitem
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	line-height: 25px
+	text-align: center
+	letter-spacing: -0.1em
+	width: 39px
+	border-left: 1px solid $color-white
+.form__tel
+	+clr
+	input
+		float: left
+		font-family: $font-base
+		padding: 4px 10px
+		border: 1px solid $color-white
+		+box
+		background: $bg-darkblue
+		font-size: 15px
+		line-height: 16px
+		color: $color-white
+		+placeholder-color($color-white)
+		&.form__telcode1
+			width: 36px
+			padding: 4px 2px
+			text-align: center
+			border-right: none
+		&.form__telcode2
+			width: 65px
+		&.form__telcode3
+			margin-left: 13px
+			width: 191px
 .input
 	font-family: $font-base
 	display: block
@@ -384,6 +453,69 @@ body
 	font-size: 15px
 	color: $color-white
 	+placeholder-color($color-white)
+.select
+	border: 1px solid $color-white
+	z-index: 1
+	position: relative
+	height: 30px - 2px
+	line-height: 30px - 2px
+	color: $color-white
+	font-size: 15px
+	background: $bg-darkblue
+	// +box-shadow(0 -1px 0 #fff, inset 0 1px 1px #b4bcbf)
+	&:hover
+		cursor: pointer
+	span
+		display: block
+		padding: 0px 32px 0 10px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		em
+			font-style: normal
+		i
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			width: 33px
+			border-left: 1px solid $color-white
+			display: block
+			&:before
+				position: absolute
+				top: 12px
+				right: 12px
+				content: ""
+				+s(arrow)
+	&.is-open
+		span
+			i:before
+				+rotate(180)
+		.select__drop
+			display: block
+	.select__drop
+		display: none
+		position: absolute
+		top: 100%
+		left: -1px
+		width: 100%
+		background: $bg-darkblue
+		border: 1px solid $color-white
+		// +box-shadow(inset 0 0px 1px #b4bcbf)
+		ul
+			margin: 0
+			padding: 0px 0
+		li
+			padding: 1px 10px
+			&:hover
+				background: $color-white
+				color: $color-base
+				cursor: pointer
+			&.is-selected
+				display: none
+			span
+				padding: 0
+
 
 .review
 	margin-bottom: 60px
@@ -404,9 +536,13 @@ body
 	&.entry_mod
 		border: none
 	.container
-		padding: 40px 0
+		padding: 39px 0 54px
+	.h2
+		margin-bottom: 22px
+	p
+		line-height: 1.6
 	p + p
-		margin-top: 1em
+		margin-top: 1.6em
 	p + ul
 		margin-top: 1em
 	small
@@ -414,6 +550,7 @@ body
 	.footnote
 		position: relative
 		font-size: $size-sm
+		margin-top: 1.4em
 	.footnote__mark
 		position: absolute
 		left: -10px
@@ -430,10 +567,10 @@ body
 			color: $color-orange
 
 .table
-	margin-bottom: 30px
+	margin-bottom: 25px
 	th, td
 		text-align: left
-		padding: 13px 20px
+		padding: 13px 16px
 		border: 1px solid rgba(#e5e5e5, 1)
 	th
 		background: $color-yellow
@@ -446,6 +583,7 @@ body
 		&:last-child
 			border-right: none
 	td
+		padding: 18px 16px
 		&:first-child
 			// text-align: left
 			padding-left: 0
@@ -457,7 +595,7 @@ body
 
 .gallery
 	background: $color-darkblue url('../img/pttrn.png')
-	padding: 35px 0
+	padding: 35px 0 26px
 	font-size: $size-sm
 	color: $color-white
 .gallery__desc
@@ -476,6 +614,7 @@ body
 		display: inline-block
 		+hide-text
 		cursor: pointer
+		+nosel
 	.gallery__prev
 		+s(prev)
 		margin-right: 15px
@@ -496,11 +635,61 @@ body
 
 
 
+.popup
+	position: fixed
+	top: -1000px
+	left: 50%
+	margin-left: -250px
+	width: 500px
+	opacity: 0
+	color: $color-white
+	background: $bg-darkblue url('../img/pttrn.png')
+	+box-shadow(1px 0px 20px 2px rgba(#000, .3))
+	// display: none
+	+transition(.3s)
+	&.is-open
+		z-index: 1000
+		opacity: 1
+		top: 60px
 
+.popup__in
+	padding: 52px 50px 50px
+.popup__close
+	+s(close)
+	cursor: pointer
+	position: absolute
+	top: 23px
+	right: 22px
+	opacity: .8
+	&:hover
+		opacity: 1
 
-
-
-
+.form
+.form__group
+	margin-bottom: 18px
+	&.is-error
+		.input,
+		.textarea
+			border-color: #8b1810
+			color: #8b1810
+.form__label
+	display: block
+	margin-bottom: 7px
+.form__actions
+	margin-top: 42px
+	.btn
+		margin-right: 24px
+.form__cancel
+	display: inline-block
+	vertical-align: middle
+	color: $color-yellow
+	text-transform: uppercase
+	text-decoration: underline
+	font-weight: 900
+	font-size: $size-sm 
+	letter-spacing: 0.1em
+	&:hover
+		text-decoration: none
 
 
 
