@@ -347,8 +347,6 @@ body { font-family: "Roboto", Arial, sans-serif; font-size: 15px; line-height: 1
 /* Overlay helper */
 .fancybox-lock { overflow: hidden !important; width: auto; }
 
-.fancybox-lock body { overflow: hidden !important; }
-
 .fancybox-lock-test { overflow-y: hidden !important; }
 
 .fancybox-overlay { position: absolute; top: 0; left: 0; overflow: hidden; display: none; z-index: 8010; background: url("../img/fancybox/fancybox_overlay.png"); }
