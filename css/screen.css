@@ -221,7 +221,7 @@ body { font-family: "Roboto", Arial, sans-serif; font-size: 15px; line-height: 1
 .select span i:before { position: absolute; top: 12px; right: 12px; content: ""; background: url('../img/icons-sb0a809dbd6.png') 0 -245px no-repeat; width: 8px; height: 5px; }
 .select.is-open span i:before { -moz-transform: rotate(180deg); -o-transform: rotate(180deg); -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); filter: progid:DXImageTransform.Microsoft.Matrix(M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand'); zoom: 1; }
 .select.is-open .select__drop { display: block; }
-.select .select__drop { display: none; position: absolute; top: 100%; left: -1px; width: 100%; background: #635398; border: 1px solid white; }
+.select .select__drop { display: none; position: absolute; top: 100%; left: -1px; width: 100%; background: #635398; border: 1px solid white; max-height: 120px; overflow-y: auto; }
 .select .select__drop ul { margin: 0; padding: 0px 0; }
 .select .select__drop li { padding: 1px 10px; }
 .select .select__drop li:hover { background: white; color: #212121; cursor: pointer; }
