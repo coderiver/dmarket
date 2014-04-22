@@ -2,22 +2,64 @@ $(document).ready(function() {
 
 	$("a[rel=fancy_group]").fancybox();
 
-	$('.js-prodslider').cycle({
-		fx: "carousel",
-		timeout: 0,
-		log: false,
-		// carouselVisible: 1,
-		slideActiveClass: "is-active",
-		pagerActiveClass: "is-active",
-		disabledClass: "is-disabled",
-		slideClass: "gallery__product",
-		allowWrap: "true",
-		// pager: ".newspreview__pager",
-		// pagerTemplate: "<span></span>",
-		slides: ".gallery__product",
-		next: ".gallery__next",
-		prev: ".gallery__prev"
+	$("#gallery").smoothDivScroll({
+		// autoScrollingMode: "onStart"
+		// hotSpotScrolling: false,
+		touchScrolling: true,
+		visibleHotSpotBackgrounds: "always"
 	});
+
+
+
+	$("#left").mouseover(function() {
+		$("#gallery").smoothDivScroll("option","autoScrollDirection","right");
+	});
+
+	$("#right").mouseover(function() {
+		$("#gallery").smoothDivScroll("option","autoScrollDirection","left");
+	});
+
+	// $('.js-prodslider').cycle({
+	// 	fx: "carousel",
+	// 	// fx:     'scrollHorz',
+ //    speed:  1200,
+	// 	timeout: 0,
+	// 	// log: false,
+	// 	// carouselVisible: 1,
+	// 	slideActiveClass: "is-active",
+	// 	pagerActiveClass: "is-active",
+	// 	disabledClass: "is-disabled",
+	// 	slideClass: "gallery__product",
+	// 	allowWrap: "true",
+	// 	// pager: ".newspreview__pager",
+	// 	// pagerTemplate: "<span></span>",
+	// 	slides: ".gallery__product",
+	// 	// prevNextEvent: 'mouseover click',
+	// 	next: $(".gallery__next"),
+	// 	prev: $(".gallery__prev")
+	// });
+
+	// function sliderPrevNext() {
+	// 	$('.gallery__prev').hover(function () {
+	// 	    intervalVar = setInterval(function(){
+	// 	        $('.js-prodslider').cycle('prev');
+	// 	    },1200);
+	// 	  }, function () {
+	// 	    clearInterval(intervalVar);
+	// 	});
+
+	// 	$('.gallery__next').hover(function () {
+	// 	    intervalVar = setInterval(function(){
+	// 	        $('.js-prodslider').cycle('next');
+	// 	    },1200);
+	// 	  }, function () {
+	// 	    clearInterval(intervalVar);
+	// 	});
+
+	// } sliderPrevNext();
+
+
+
 
 	$(".js-price").click(function (){
 		var page = $(this).attr("href");
