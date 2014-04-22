@@ -10,14 +10,30 @@ $(document).ready(function() {
 	});
 
 
-
-	$("#left").mouseover(function() {
-		$("#gallery").smoothDivScroll("option","autoScrollDirection","right");
-	});
-
-	$("#right").mouseover(function() {
+	$("#left").hover(function() {
+		
+		$("#gallery").smoothDivScroll("startAutoScrolling");
 		$("#gallery").smoothDivScroll("option","autoScrollDirection","left");
+	}, function() {
+		$("#gallery").smoothDivScroll("stopAutoScrolling");
 	});
+
+	$("#right").hover(function() {
+		
+		$("#gallery").smoothDivScroll("startAutoScrolling");
+		$("#gallery").smoothDivScroll("option","autoScrollDirection","right");
+	}, function() {
+		$("#gallery").smoothDivScroll("stopAutoScrolling");
+	});
+	// $("#left").mouseover(function() {
+		
+	// });
+
+	// $("#right").mouseover(function() {
+	// 	$("#gallery").smoothDivScroll("stopAutoScrolling");
+	// 	$("#gallery").smoothDivScroll("option","autoScrollDirection","left");
+	// 	$("#gallery").smoothDivScroll("startAutoScrolling");
+	// });
 
 	// $('.js-prodslider').cycle({
 	// 	fx: "carousel",
