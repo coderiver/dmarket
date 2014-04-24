@@ -8,7 +8,7 @@ $(document).ready(function() {
 		touchScrolling: true,
 		visibleHotSpotBackgrounds: "always"
 	});
-	$('#left,right').hide();
+	$('#left,#right').hide();
 
 	// $("#left").hover(function() {
 	// 	$("#gallery").smoothDivScroll("enable");
