@@ -8,23 +8,25 @@ $(document).ready(function() {
 		touchScrolling: true,
 		visibleHotSpotBackgrounds: "always"
 	});
+	$('#left,right').hide();
 
+	// $("#left").hover(function() {
+	// 	$("#gallery").smoothDivScroll("enable");
+	// 	// $("#gallery").smoothDivScroll("startAutoScrolling");
+	// 	// $("#gallery").smoothDivScroll("option","autoScrollDirection","left");
+	// 	 $("#makeMeScrollable").smoothDivScroll("scrollToElement", "first");
+	// }, function() {
+	// 	$("#gallery").smoothDivScroll("disable");
+	// });
 
-	$("#left").hover(function() {
-		
-		$("#gallery").smoothDivScroll("startAutoScrolling");
-		$("#gallery").smoothDivScroll("option","autoScrollDirection","left");
-	}, function() {
-		$("#gallery").smoothDivScroll("stopAutoScrolling");
-	});
-
-	$("#right").hover(function() {
-		
-		$("#gallery").smoothDivScroll("startAutoScrolling");
-		$("#gallery").smoothDivScroll("option","autoScrollDirection","right");
-	}, function() {
-		$("#gallery").smoothDivScroll("stopAutoScrolling");
-	});
+	// $("#right").hover(function() {
+	// 	$("#gallery").smoothDivScroll("enable");
+	// 	// $("#gallery").smoothDivScroll("startAutoScrolling");
+	// 	// $("#gallery").smoothDivScroll("option","autoScrollDirection","right");
+	// 	$("#makeMeScrollable").smoothDivScroll("scrollToElement", "last");
+	// }, function() {
+	// 	$("#gallery").smoothDivScroll("disable");
+	// });
 	// $("#left").mouseover(function() {
 		
 	// });
