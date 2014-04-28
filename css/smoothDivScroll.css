@@ -32,6 +32,11 @@ div.scrollingHotSpotLeftVisible
 	filter: alpha(opacity = 1); /* Opacity for Internet Explorer. */
 	zoom: 1; /* Trigger "hasLayout" in Internet Explorer 6 or older versions */
 }
+/* Visible left hotspot */
+div.scrollingHotSpotLeftVisible:hover
+{
+	background-image: url(../img/icons/sc_prev_hover.png);
+}
 
 /* Invisible right hotspot */
 div.scrollingHotSpotRight
@@ -59,6 +64,11 @@ div.scrollingHotSpotRightVisible
 	filter: alpha(opacity = 1);
 	-moz-opacity: 1;
 	zoom: 1;
+}
+/* Visible right hotspot */
+div.scrollingHotSpotRightVisible:hover
+{
+	background-image: url(../img/icons/sc_next_hover.png);
 }
 
 /* The scroll wrapper is always the same width and height as the containing element (div).
